@@ -41,4 +41,16 @@ The outputs will be located in the data folder, and those are:
 
 ## How to run the model on batch?
 
+### Option 1:
+
+Follow the commands of the previous step and then run:
+
+```console
+python src/batch_run.py
+```
+
+This command will run the `src/batch_run.py` file using the `data/input_to_test.csv` as input.
+
+### Option 2:
+
 Build and deploy the docker container, and change the source and output path of the data in the `src/batch_run.py` file.
