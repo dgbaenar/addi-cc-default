@@ -2,7 +2,7 @@
 
 ## UCI Default of Credit Card Clients Dataset
 
-The goal of this project is to automate the batch prediction of the probability of default for the users that currently have a loan using the [UCI Default of Credit Card Clients Dataset](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients) -
+The goal of this project is to automate the batch prediction of the probability of default for the users that currently have a loan using the [UCI Default of Credit Card Clients Dataset](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients).
 
 ## How to reproduce the experiment?
 
