@@ -5,4 +5,6 @@ url = "https://archive.ics.uci.edu/ml/machine-learning-databases/00350/default%2
 
 df = pd.read_excel(url, header=1)
 
-df.to_csv("./data/cc_default.csv", index=False)
+df.to_csv("./data/raw.csv", index=False)
+
+print("Data file successfully downloaded.")

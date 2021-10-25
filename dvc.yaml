@@ -1,0 +1,26 @@
+stages:
+  pull:
+    cmd: python train/pull.py
+    deps:
+    - train/pull.py
+    outs:
+    - ./data/raw.csv
+  preprocess:
+    cmd: python train/preprocess.py
+    deps:
+    - ./data/raw.csv
+    - train/preprocess.py
+    outs:
+    - ./data/test.csv
+    - ./data/train.csv
+  train:
+    cmd: python train/train.py
+    deps:
+    - ./data/test.csv
+    - ./data/train.csv
+    - train/train.py
+    outs:
+    - data/classes.csv
+    metrics:
+    - ./data/metrics/scores.json
+

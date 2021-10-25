@@ -1,0 +1,47 @@
+schema: '2.0'
+stages:
+  pull:
+    cmd: python train/pull.py
+    deps:
+    - path: train/pull.py
+      md5: 03e722e529c5229e1179b90e5dad0c88
+      size: 258
+    outs:
+    - path: ./data/raw.csv
+      md5: b4bf11c60a1b7b3298a1bb20d7f5ae05
+      size: 2867208
+  preprocess:
+    cmd: python train/preprocess.py
+    deps:
+    - path: ./data/raw.csv
+      md5: b4bf11c60a1b7b3298a1bb20d7f5ae05
+      size: 2867208
+    - path: train/preprocess.py
+      md5: 48c5cf0e58e6090e83b61f192f7a9435
+      size: 2540
+    outs:
+    - path: ./data/test.csv
+      md5: a32718e213ab319b39db1d23a3eec7d7
+      size: 647963
+    - path: ./data/train.csv
+      md5: ebb0eb6af85ebbc17c00cf032ba62962
+      size: 1609887
+  train:
+    cmd: python train/train.py
+    deps:
+    - path: ./data/test.csv
+      md5: a32718e213ab319b39db1d23a3eec7d7
+      size: 647963
+    - path: ./data/train.csv
+      md5: ebb0eb6af85ebbc17c00cf032ba62962
+      size: 1609887
+    - path: train/train.py
+      md5: cbba90f78c9714d628cad24d20bbba49
+      size: 4677
+    outs:
+    - path: ./data/metrics/scores.json
+      md5: d059c299e10ee7a7f470a17fd6489992
+      size: 143
+    - path: data/classes.csv
+      md5: 6235f89a8a02ae3553ec5ef04b908818
+      size: 18017
