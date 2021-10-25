@@ -53,7 +53,7 @@ The outputs will be located in the data folder, and those are:
     - `output.csv`: output from batch_run.py
     - `data.json`: file with the categorical and numerical variables used in the model.
 - `img`: plots of the confusion matrix from the test data set and the shap values of all the variables used to predict default probability.
-- `metrics`: threshold, roc_auc, precision, recall and f1_score go.
+- `metrics`: threshold, roc_auc, precision, recall and f1_score.
 - `models`: joblib files for imputer, model and shap explainer.
 
 ## How to run the model on batch?
