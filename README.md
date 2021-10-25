@@ -2,11 +2,13 @@
 
 ## UCI Default of Credit Card Clients Dataset
 
-The goal of this project is to automate the batch prediction of the probability of default for the users that currently have a loan using the [UCI Default of Credit Card Clients Dataset](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients).
+The goal of this project is to automate in batch the prediction of the probability of default for the users that currently have a loan using the [UCI Default of Credit Card Clients Dataset](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients). The current repository uses a XGBoost model with a grid search approach to find optimal hyperparameters.
 
 ## How to reproduce the experiment?
 
-Create a virtual environment using python 3.8 and install the requirements following the next steps:
+Start by deleting all the csv files stored in the data folder.
+
+Then, create a virtual environment using python 3.8 and install the requirements following the next steps:
 
 ```console
 virtualenv venv --python=python3.8
@@ -17,6 +19,7 @@ source venv/bin/activate
 ```console
 pip install -r requirements.txt
 ```
+### Option 1:
 
 Pull the data, preprocess it and train the XGBoost model using Data Version Control (DVC) running the following command:
 
@@ -25,6 +28,20 @@ dvc repro
 ```
 
 The previous command will run the pipeline located in the dvc.yaml file.
+
+### Option 2:
+
+Run manually the following scripts in order:
+
+```console
+python pull.py
+```
+```console
+python preprocess.py
+```
+```console
+python train.py
+```
 
 The outputs will be located in the data folder, and those are:
 - `data`:
@@ -43,7 +60,9 @@ The outputs will be located in the data folder, and those are:
 
 ### Option 1:
 
-Follow the commands of the previous step and then run:
+Follow the commands of the previous step to setup the virtual environment and have defined the input data to test.
+
+Then run:
 
 ```console
 python src/batch_run.py
@@ -53,4 +72,4 @@ This command will run the `src/batch_run.py` file using the `data/input_to_test.
 
 ### Option 2:
 
-Build and deploy the docker container, and change the source and output path of the data in the `src/batch_run.py` file.
+Build and deploy the docker container to run a cron schedule task, and change the source and output path of the data in the `src/batch_run.py` file.

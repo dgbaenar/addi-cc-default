@@ -1,17 +1,68 @@
 {
-    "FINAL_DATA":[
-        "LIMIT_BAL","AGE","PAY_0","PAY_2","PAY_3","PAY_4","PAY_5","PAY_6",
-        "BILL_AMT1","BILL_AMT2","BILL_AMT3","BILL_AMT4","BILL_AMT5","BILL_AMT6",
-        "PAY_AMT1","PAY_AMT2","PAY_AMT3","PAY_AMT4","PAY_AMT5","PAY_AMT6",
-        "SEX_1","SEX_2","EDUCATION_1","EDUCATION_2","EDUCATION_3","EDUCATION_4",
-        "MARRIAGE_1","MARRIAGE_2","MARRIAGE_3","MARRIAGE_4"
-          ],
-    "CATEGORICAL_FEATURES":[
+    "MODEL_INPUT": [
+        "ID",
+        "LIMIT_BAL",
+        "SEX",
+        "EDUCATION",
+        "MARRIAGE",
+        "AGE",
+        "PAY_0",
+        "PAY_2",
+        "PAY_3",
+        "PAY_4",
+        "PAY_5",
+        "PAY_6",
+        "BILL_AMT1",
+        "BILL_AMT2",
+        "BILL_AMT3",
+        "BILL_AMT4",
+        "BILL_AMT5",
+        "BILL_AMT6",
+        "PAY_AMT1",
+        "PAY_AMT2",
+        "PAY_AMT3",
+        "PAY_AMT4",
+        "PAY_AMT5",
+        "PAY_AMT6"
+    ],
+    "FINAL_DATA": [
+        "LIMIT_BAL",
+        "AGE",
+        "PAY_0",
+        "PAY_2",
+        "PAY_3",
+        "PAY_4",
+        "PAY_5",
+        "PAY_6",
+        "BILL_AMT1",
+        "BILL_AMT2",
+        "BILL_AMT3",
+        "BILL_AMT4",
+        "BILL_AMT5",
+        "BILL_AMT6",
+        "PAY_AMT1",
+        "PAY_AMT2",
+        "PAY_AMT3",
+        "PAY_AMT4",
+        "PAY_AMT5",
+        "PAY_AMT6",
+        "SEX_1",
+        "SEX_2",
+        "EDUCATION_1",
+        "EDUCATION_2",
+        "EDUCATION_3",
+        "EDUCATION_4",
+        "MARRIAGE_1",
+        "MARRIAGE_2",
+        "MARRIAGE_3",
+        "MARRIAGE_4"
+    ],
+    "CATEGORICAL_FEATURES": [
         "SEX",
         "EDUCATION",
         "MARRIAGE"
     ],
-    "NUMERICAL_FEATURES":[
+    "NUMERICAL_FEATURES": [
         "LIMIT_BAL",
         "AGE",
         "PAY_0",
@@ -33,18 +84,18 @@
         "PAY_AMT5",
         "PAY_AMT6"
     ],
-    "CATEGORIES":{
-        "SEX":[
+    "CATEGORIES": {
+        "SEX": [
             1,
             2
         ],
-        "EDUCATION":[
-           1,
-           2,
-           3,
-           4
+        "EDUCATION": [
+            1,
+            2,
+            3,
+            4
         ],
-        "MARRIAGE":[
+        "MARRIAGE": [
             1,
             2,
             3,
